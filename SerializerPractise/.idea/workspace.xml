@@ -23,8 +23,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/serializerApp/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="445" column="54" selection-start-line="445" selection-start-column="54" selection-end-line="445" selection-end-column="54" />
+            <state relative-caret-position="83">
+              <caret line="450" lean-forward="true" selection-start-line="450" selection-end-line="450" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -104,6 +104,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -201,7 +202,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.29411766" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.53594774" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -275,8 +276,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/serializerApp/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="445" column="54" selection-start-line="445" selection-start-column="54" selection-end-line="445" selection-end-column="54" />
+        <state relative-caret-position="83">
+          <caret line="450" lean-forward="true" selection-start-line="450" selection-end-line="450" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
