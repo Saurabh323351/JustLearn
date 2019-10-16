@@ -426,29 +426,3 @@ class HelloView(GenericAPIView):
         # print(payload,'---------->payload')
 
         return Response(content)
-
-import pika
-
-
-class RabbitMq(GenericAPIView):
-
-    def get(self, request):
-
-        # !/usr/bin/env python
-
-        connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
-        channel = connection.channel()
-
-        channel.queue_declare(queue='hello')
-
-        channel.basic_publish(exchange='',
-                              routing_key='hello',
-                              body='Hello World! again')
-
-        print(" [x] Sent 'Hello World!'")
-
-        connection.close()
-
-        return HttpResponse(json.dumps({"task":"done"}))
-
-
