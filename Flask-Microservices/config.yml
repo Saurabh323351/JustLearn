@@ -1,0 +1,4 @@
+WEB_SERVER_ADDRESS: '0.0.0.0:8080'
+level: DEBUG
+#AMQP_URI: ${AMQP_URI:pyamqp://${RABBITMQ_USER:guest}:${RABBITMQ_PASSWORD:password}@${RABBITMQ_HOST:localhost}}
+AMQP_URI: pyamqp://guest:guest@localhost
