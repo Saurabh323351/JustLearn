@@ -146,7 +146,8 @@ class Square(Shape):
         return 4 * self.__side
 
 square=Square(10)
-a=square.area()
-p=square.perimeter()
-print(a)
-print(p)
+area=square.area()
+per=square.perimeter()
+print(area)
+print(per)
+
