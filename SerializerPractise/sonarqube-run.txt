@@ -1,0 +1,15 @@
+py.test --cov=serializerApp --cov=SerializerPractise
+
+
+py.test --cov serializerApp  --cov-report=html
+py.test --cov serializerApp  --cov-report=xml
+
+coverage report
+
+coverage xml
+
+to run command on terminal
+
+sonar-scanner
+
+we have .coveragerc file where we ignore file from coverage report

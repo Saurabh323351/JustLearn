@@ -34,11 +34,11 @@ class EmployeeCrud(GenericAPIView):
 
         print(type(queryset), '--------->queryset')
 
-        emp_obj=Employee.objects.get(ename="saurabh")
-        print(type(emp_obj),'--------->emp_obj')
-
-        emp_obj_list = Employee.objects.filter(eaddr="kandivali east")
-        print(emp_obj_list)
+        # emp_obj=Employee.objects.get(ename="saurabh")
+        # print(type(emp_obj),'--------->emp_obj')
+        #
+        # emp_obj_list = Employee.objects.filter(eaddr="kandivali east")
+        # print(emp_obj_list)
         """
         Here we are getting single emp_obj ,we are getting collection of emp objects i.e Queryset
         In order to convert this Queryset into python native type ,We need to pass many as True in our
@@ -61,7 +61,7 @@ class EmployeeCrud(GenericAPIView):
         Here Employee.objects.filter(eaddr="kandivali east") returns List of objects means ,collection 
         of emp objects ,so we need to take many=True
         """
-        eserializer=EmployeeSerializer(emp_obj_list,many=True)
+        eserializer=EmployeeSerializer(queryset,many=True)
         print(eserializer.data, type(eserializer.data), '------->')
 
 
@@ -280,7 +280,7 @@ from bitly_api import Connection,BitlyError, Error
 class Registeration(APIView):
 
     serializer_class= RegistrationSerializer
-    permission_classes=(AllowAny,)
+    permission_classes=(IsAuthenticated,)
 
     def post(self,request,*args,**kwargs):
 
@@ -426,3 +426,153 @@ class HelloView(GenericAPIView):
         # print(payload,'---------->payload')
 
         return Response(content)
+
+from django.core.files.storage import FileSystemStorage
+
+# @method_decorator(csrf_exempt,name="dispatch")
+class UploadFile(APIView):
+
+
+    def post(self,request,*args,**kwargs):
+
+        response = {
+            'success': False,
+            'message': 'something went wrong',
+            'data': []
+        }
+
+
+        # print(request.body,'------>body')
+
+        print('------->')
+        f=json.loads(request.body)
+
+        # print(f,'----------->f')
+        # print(request.POST,'---------->request.POST')
+
+        # print(type(request.POST))
+        # print(eval(request.POST))
+        # print(request.FILES['inpFile'],'------->inpFile')
+        # myfile=f['inpFile']
+        #
+        # import base64
+        # decoded = base64.b64decode(f['inpFile'])
+        # print(type(decoded),'------->decoded')
+        # print(json.loads(decoded.decode('utf-8')))
+
+        import base64
+        # decoded=base64.b64decode(json.loads(f['inpFile'].read()))
+        # print(decoded,'------d')
+        # # print(request.FILES['inpFile'])
+        # # myfile = request.FILES['inpFile']
+        # # print(type(myfile),'----->type','---->',myfile.name)
+        from django.core.files.base import ContentFile
+
+        image_data = f['inpFile']
+        # format, imgstr = image_data.split(';base64,')
+        # print("format", format)
+        # ext = format.split('/')[-1]
+
+        data = ContentFile(base64.b64decode(image_data))
+        print(type(data),'===========>data')
+        file_name = "myphoto.jpg"
+        # user.image.save(file_name, data, save=True)
+
+        fs = FileSystemStorage()
+        filename = fs.save(file_name, data)
+        # uploaded_file_url = fs.url(filename)
+        # print(uploaded_file_url,'----->',filename,'----->',fs)
+
+        return JsonResponse(response)
+
+@method_decorator(csrf_exempt,name="dispatch")
+class ImageUploadAlongWithOtherData(APIView):
+
+    def post(self,request,*args,**kwargs):
+
+        response = {
+            'success': False,
+            'message': 'something went wrong',
+            'data': []
+        }
+        import ast
+        print(request.data,'----->request.data')
+        """
+        in request.data ,i am getting all form data along with image file also 
+        just i need to serializer ,that will automatically save all things
+        
+        """
+
+        print(request.FILES)
+        print(request.POST)
+        print(request.POST.get('labels'),type(request.POST.get('labels')))
+        l=request.POST.get('labels')
+        d=request.POST.get('dicttry')
+        res = ast.literal_eval(l)
+        res_d = ast.literal_eval(d)
+        # print(type(int(l)))
+        print("final list", res,type(res))
+        print("final dict", res_d,type(res_d))
+        print(type(res))
+        img=request.FILES['profile1']
+        img2=request.FILES['inpFile']
+
+        print(img)
+        print(img2)
+
+        fs = FileSystemStorage()
+        filename = fs.save(img.name, img)
+        uploaded_file_url = fs.url(filename)
+
+        return JsonResponse(response)
+
+# def send_reminder(request):
+#
+#     pass
+#
+#     time_to_match=""
+#     return HttpResponse('hi')
+#
+import requests
+class A(APIView):
+
+    def get(self,request,*args,**kwargs):
+
+            _url="https://accounts.google.com/o/oauth2/v2/auth"
+            client_id="681108048610-ujjurhikob4653vol9jb0kfst5u41k2a.apps.googleusercontent.com"
+            client_secret="MqANqGZPuyGYSf8pmsoDfC4W"
+            response_type="code"
+            scope="https://www.googleapis.com/auth/gmail.send"
+            redirect_uri="http://localhost"
+            access_type="offline"
+
+            # url=_url+client_id+response_type+scope+redirect_uri+access_type
+
+            # url=f"https://accounts.google.com/o/oauth2/v2/auth?client_id=681108048610-ujjurhikob4653vol9jb0kfst5u41k2a.apps.googleusercontent.com&response_type=code&scope=https://www.googleapis.com/auth/gmail.send&redirect_uri=http://localhost&access_type=offline"
+            # response=requests.get(url)
+            # print(json.loads(response.text))
+            # print(response.text)
+
+            request_data = {
+
+                "code":"4/vgFHz2bHYXCvK5ni0pQ7zGytk4yYyPXGmIqxrCuKiZFeOTV_VV9PYpdUAWeAr395SyjM7COXRoPNUQ9ekdTiv8k",
+                "client_id":"681108048610-ujjurhikob4653vol9jb0kfst5u41k2a.apps.googleusercontent.com",
+
+                "client_secret":"MqANqGZPuyGYSf8pmsoDfC4W",
+
+                "grant_type": "authorization_code",
+                "redirect_uri": "http://localhost:8000"
+
+            }
+
+            headers = {
+
+                "Content-Type": "application/x-www-form-urlencoded"
+            }
+
+            response = requests.post(url='https://www.googleapis.com/oauth2/v4/token', data=request_data,headers=headers)
+
+            print(response.text)
+
+
+            return JsonResponse(data=[],safe=False)

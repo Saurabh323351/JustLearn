@@ -38,7 +38,12 @@ urlpatterns = [
     url(r'^$', schema_view),
     path('activate/<token>',activate,name="activate"),
     path('login/',UserLogin.as_view(),name="user_login"),
+    path('upload_file/',UploadFile.as_view(),name="upload_file"),
 
+    # path('send_rem/',send_reminder,name="send_reminder"),
+    # path('send/',RabbitMq.as_view(),name="producer")
 
-    path('send/',RabbitMq.as_view(),name="producer")
+    path('upload_img/',ImageUploadAlongWithOtherData.as_view(),name="image"),
+    path('first/',A.as_view()),
+
 ]

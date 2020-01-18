@@ -2,11 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fc3dd14-82d3-4c79-a519-3723edc95cdd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Ecommerce/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/src/ecommerce/ecommerce/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Ecommerce/src/ecommerce/ecommerce/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/SerializerPractise.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SerializerPractise.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SerializerPractise/receive.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerializerPractise/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/SerializerPractise/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerializerPractise/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/SerializerPractise/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirement.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirement.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serializerApp/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/serializerApp/tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serializerApp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/serializerApp/views.py" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,9 +40,15 @@
   </component>
   <component name="ProjectId" id="1QPCyPnLI7TcDfgi55Z1LxSyyhr" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Videos/FundooNotes-Folder" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -44,18 +58,6 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration default="true" type="tests" factoryName="Unittests">
@@ -109,6 +111,18 @@
       <method v="2" />
     </configuration>
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -134,5 +148,15 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="726" y="255" width="524" height="594" key="FileChooserDialogImpl" timestamp="1579351914470">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="726" y="255" width="524" height="594" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1579351914470" />
+    <state x="561" y="341" key="com.intellij.ide.util.TipDialog" timestamp="1579240736412">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="561" y="341" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1579240736412" />
   </component>
 </project>
